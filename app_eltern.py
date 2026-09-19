@@ -143,29 +143,29 @@ with tab_roadmap:
     
     # BTV Reference Data Setup
     if altersklasse in ["U7 / U8", "U9 / U10"]:
-        foerderstufe_name = "Förderstufe 1 (U7–U10) | BTV-Kids-Pool"[cite: 2]
-        soll_tennis = "3–5 Std. (U8) bzw. 5–7 Std. (U10)"[cite: 3]
-        soll_matches = "10–25 (U8) bzw. 30–40 (U10)"[cite: 3]
-        tage_platz = "2–4 Tage"[cite: 3]
-        fokus = "Allgemeinsportliches Talent, BTV-Kids-Race Turniere, Sichtung"[cite: 2]
+        foerderstufe_name = "Förderstufe 1 (U7–U10) | BTV-Kids-Pool"
+        soll_tennis = "3–5 Std. (U8) bzw. 5–7 Std. (U10)"
+        soll_matches = "10–25 (U8) bzw. 30–40 (U10)"
+        tage_platz = "2–4 Tage"
+        fokus = "Allgemeinsportliches Talent, BTV-Kids-Race Turniere, Sichtung"
     elif altersklasse == "U11 / U12":
-        foerderstufe_name = "Förderstufe 2 (U11–U12) | BTV-Talent-Pool"[cite: 2]
-        soll_tennis = "6–8 Std. pro Woche"[cite: 4]
-        soll_matches = "40–60 Matches pro Jahr"[cite: 4]
-        tage_platz = "3–4 Tage"[cite: 4]
+        foerderstufe_name = "Förderstufe 2 (U11–U12) | BTV-Talent-Pool"
+        soll_tennis = "6–8 Std. pro Woche"
+        soll_matches = "40–60 Matches pro Jahr"
+        tage_platz = "3–4 Tage"
         fokus = "Einstieg DTB-Ranglistenturniere (mind. 10 Siege für Rangliste peilen)"
     elif altersklasse in ["U13 / U14", "U15 / U16"]:
-        foerderstufe_name = "Förderstufe 3 (U13–U16) | BTV-Kader"[cite: 2]
-        soll_tennis = "8–12 Std. (U14) bzw. 10–14 Std. (U16)"[cite: 5]
-        soll_matches = "50–70 (U14) bzw. 60–80 (U16)"[cite: 5]
-        tage_platz = "4–5 Tage"[cite: 5]
-        fokus = "DTB-Ranglistenplatzierung, TE-/ITF-Turniere, Athletik"[cite: 2, 5]
+        foerderstufe_name = "Förderstufe 3 (U13–U16) | BTV-Kader"
+        soll_tennis = "8–12 Std. (U14) bzw. 10–14 Std. (U16)"
+        soll_matches = "50–70 (U14) bzw. 60–80 (U16)"
+        tage_platz = "4–5 Tage"
+        fokus = "DTB-Ranglistenplatzierung, TE-/ITF-Turniere, Athletik"
     else:
-        foerderstufe_name = "Förderstufe 4 (U17–U18) | BTV-Kader"[cite: 2]
-        soll_tennis = "12–18 Std. Tennis & Athletik"[cite: 6]
-        soll_matches = "70–90 Matches pro Jahr"[cite: 6]
-        tage_platz = "5–6 Tage"[cite: 6]
-        fokus = "ITF-Jugend, nationale Damen/Herren, profiorientiert"[cite: 2, 6]
+        foerderstufe_name = "Förderstufe 4 (U17–U18) | BTV-Kader"
+        soll_tennis = "12–18 Std. Tennis & Athletik"
+        soll_matches = "70–90 Matches pro Jahr"
+        tage_platz = "5–6 Tage"
+        fokus = "ITF-Jugend, nationale Damen/Herren, profiorientiert"
 
     st.info(f"📍 **Ziel-Ebene für {altersklasse}:** {foerderstufe_name}")
 
@@ -195,8 +195,8 @@ with tab_roadmap:
             """)
         else:
             st.markdown("""
-                * **Turnierfokus:** Ausgewogene Periodisierung aus DTB-, TE- und ITF-Turnieren sowie Regenerationsphasen[cite: 5, 6].
-                * **Kader-Kriterien:** Ranglistenplatzierung im eigenen Jahrgang maßgeblich für Sonder- oder Grundförderung[cite: 2].
+                * **Turnierfokus:** Ausgewogene Periodisierung aus DTB-, TE- und ITF-Turnieren sowie Regenerationsphasen.
+                * **Kader-Kriterien:** Ranglistenplatzierung im eigenen Jahrgang maßgeblich für Sonder- oder Grundförderung.
             """)
 
 # --- TAB 3: BUDGET & ZEIT ---
@@ -213,7 +213,7 @@ with tab_budget:
         turniere_anzahl = st.slider("Geplante Turniere pro Jahr:", 5, 30, 15)
         cost_turnier = st.slider("Durchschnittliches Nenngeld pro Turnier (€):", 20, 60, 35)
 
-    # Calculation (30 Weeks Summer, 22 Weeks Winter)
+    # Calculation (25 Weeks Summer, 22 Weeks Winter)
     weeks_summer = 25
     weeks_winter = 22
     
@@ -242,7 +242,7 @@ with tab_budget:
     netto_costs = total_costs - zuschuss
 
     with b2:
-        st.subheader("📊 geschätzte Jahresausgaben")
+        st.subheader("📊 Geschätzte Jahresausgaben")
         st.markdown(f"""
             <div class='btv-card'>
                 <h4>Gesamtkosten Training & Turniere:</h4>
